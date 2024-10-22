@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> 
+        // var pwd=prompt("Enter your password to see the page");
+        // if(pwd=="admin@123")
+        // {
+        // alert("Hello, Welcome to this page");
+        // }
+        // else
+        // {
+        //     alert("Pls check your password....");
+        // }
+        function msgToUser()
+         {
+        var userInter=confirm("If you are not a robot, click OK or click Cancel");
+        if(userInter==true)
+        {
+        alert("So u ar a human");
+        var m="You are  a human";
+        document.getElementById("msg").innerHTML=m;
+        
+        }
+        else    {
+            var m1="U are a robot";
+            document.getElementById("msg").innerHTML=m1;
+        alert('U are a robot');
+        
+        }
+        }
+           </script> 
+     
+</head>
+<body onload="msgToUser()">
+    <div>
+    <p id="msg">Message is going to appear here</p>   
+</div>
+
+
+    <!-- <form>
+        
+        <fieldset>
+        <legend>CustomerInfo</legend>
+        <label for="custid">Enter customerID</label>
+        <input type="number"  autofocus="true" name="custid" id="custid">
+        <br/>
+        <label for="custname">Enter customerName</label>
+        <input type="number" name="custname" id="custname">
+        <br/>
+        <input type="submit" value="Submit Customer Details" id="btnsubmit"/>
+    </fieldset>
+    </form> -->
+</body>
+</html>
