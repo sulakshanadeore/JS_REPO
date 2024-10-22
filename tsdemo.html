@@ -4,11 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="file2.js"></script>
-    <script src="file1.js"></script>
+    <script src="newPerson.js"></script>
+    <!-- <script src="file1.js"></script> -->
+    <script>
+
+function AcceptData()
+{
+var p1=document.getElementById("custid").value;
+var p2=document.getElementById("custname").value;
+
+        let p=new NewPerson(p1,p2,new Date(2024,9,10));
+        p.getName();
+}
+
+    </script>
 </head>
 <body>
-    <button onclick="alert(add(10,20))">click to show ans</button>
+    <form>
+        
+        <fieldset>
+        <legend>CustomerInfo</legend>
+        <label for="custid">Enter customerID</label>
+        <input type="number"  autofocus="true" name="custid" id="custid">
+        <br/>
+        <label for="custname">Enter customerName</label>
+        <input type="text" name="custname" id="custname">
+        <br/>
+        <input type="button" value="Submit Customer Details" id="btnsubmit" onclick="AcceptData()"/>
+    </fieldset>
+    </form> 
+    
 
 </body>
 </html>
