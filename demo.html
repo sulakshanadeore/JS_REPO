@@ -4,7 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script> 
+    <script>
+        function calAge()
+        {
+    
+           var dt=new Date(); 
+        // dt=prompt('Enter birth date');
+dt=document.getElementById('birthdate').value;
+        var d=Date.parse(dt);
+    console.log(d);
+if(isNaN(d))
+      alert("Date is invalid");
+    else    
+    {
+    alert("Date is valid");
+    var age=dt.getFullYear-Date.getFullYear;
+    alert(age);
+    }
+}
         // var pwd=prompt("Enter your password to see the page");
         // if(pwd=="admin@123")
         // {
@@ -14,31 +31,33 @@
         // {
         //     alert("Pls check your password....");
         // }
-        function msgToUser()
-         {
-        var userInter=confirm("If you are not a robot, click OK or click Cancel");
-        if(userInter==true)
-        {
-        alert("So u ar a human");
-        var m="You are  a human";
-        document.getElementById("msg").innerHTML=m;
+        // function msgToUser()
+        //  {
+        // var userInter=confirm("If you are not a robot, click OK or click Cancel");
+        // if(userInter==true)
+        // {
+        // alert("So u ar a human");
+        // var m="You are  a human";
+        // document.getElementById("msg").innerHTML=m;
         
-        }
-        else    {
-            var m1="U are a robot";
-            document.getElementById("msg").innerHTML=m1;
-        alert('U are a robot');
+        // }
+        // else    {
+        //     var m1="U are a robot";
+        //     document.getElementById("msg").innerHTML=m1;
+        // alert('U are a robot');
         
-        }
-        }
+        // }
+        // }
            </script> 
      
 </head>
-<body onload="msgToUser()">
+<body>
     <div>
     <p id="msg">Message is going to appear here</p>   
-</div>
 
+</div>
+<input type="date" name="" id="birthdate">
+<input type="submit" value="AgeCalculation" onclick="calAge()">
 
     <!-- <form>
         
